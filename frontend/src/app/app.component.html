@@ -1,0 +1,18 @@
+<div>
+  <h2> LIVE DATA CORONAVIRUS IN THE WORLD</h2>
+  <select class="form-control" (change)="onChange($event.target.value)">
+    <option disabled selected>SELECT A COUNTRY</option>
+    <option *ngFor="let country of countries"  [value]="country">{{country}}</option>
+  </select>
+  <div ng-if="countryData">
+    <h3> Country : {{countryData.Country}} </h3>
+    <h3> NewConfirmed : {{countryData.NewConfirmed}} </h3>
+    <h3> TotalConfirmed : {{countryData.TotalConfirmed}} </h3>
+    <h3> NewDeaths : {{countryData.NewDeaths}} </h3>
+    <h3> TotalDeaths : {{countryData.TotalDeaths}} </h3>
+    <h3> NewRecovered : {{countryData.NewRecovered}} </h3>
+    <h3> TotalRecovered : {{countryData.TotalRecovered}} </h3>
+    <h3> Date : {{countryData.Date}}</h3> 
+  </div>
+  <br><br>
+</div>
